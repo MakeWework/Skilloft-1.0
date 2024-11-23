@@ -1,20 +1,9 @@
-"use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+
 
 function Navbar() {
-  /* const [sticky, setSticky] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      setSticky(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
- */
+ 
   const navItems = ["Explore", "Trends", "For Employers"];
 
   const pages = navItems.map((page) => {

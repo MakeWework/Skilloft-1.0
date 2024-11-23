@@ -5,6 +5,7 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
+import Link from "next/link";
 
 function Footer() {
   const footerLinks = [
@@ -17,25 +18,36 @@ function Footer() {
     { text: "Privacy Policy", href: "/privacy-policy" },
   ];
 
+  const socials = [
+    { icon: <FaLinkedin />, href: "https://www.linkedin.com" },
+    { icon: <BsTwitterX />, href: "https://www.twitter.com" },
+    { icon: <FaInstagram />, href: "https://www.instagram.com" },
+    { icon: <FaFacebook />, href: "https://www.facebook.com" },
+    { icon: <FaYoutube />, href: "https://www.youtube.com" },
+  ];
+
   return (
     <>
       <footer className=" bg-[#FFD700] flex justify-evenly items-center">
         <div>
-          <img src="/skilloft.png" alt="skilloft" width={140} />
+          <Link href="/">
+            <img src="/skilloft.png" alt="skilloft" width={140} />
+          </Link>
+
           <div className="flex gap-2 p-2 text-xl text-white">
-            <FaLinkedin />
-            <BsTwitterX />
-            <FaInstagram />
-            <FaFacebook />
-            <FaYoutube />
+            {socials.map((social, index) => (
+              <Link href={social.href} key={index}>
+                {social.icon}
+              </Link>
+            ))}
           </div>
         </div>
 
         <div className="flex gap-8 text-base">
           {footerLinks.map((link, index) => (
-            <a href={link.href} key={index}>
+            <Link href={link.href} key={index}>
               {link.text}
-            </a>
+            </Link>
           ))}
         </div>
         <section className="flex items-center">
