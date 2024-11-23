@@ -7,7 +7,7 @@ import {
 import { BsTwitterX } from "react-icons/bs";
 import Link from "next/link";
 
-function Footer() {
+export default function Footer() {
   const footerLinks = [
     { text: "About Us", href: "/about" },
     { text: "For entry-level Techies", href: "/entry-level" },
@@ -28,7 +28,7 @@ function Footer() {
 
   return (
     <>
-      <footer className=" bg-[#FFD700] flex justify-evenly items-center">
+      <footer className="bg-[#FFD700] flex justify-between items-center px-[150px]">
         <div>
           <Link href="/">
             <img src="/skilloft.png" alt="skilloft" width={140} />
@@ -60,5 +60,3 @@ function Footer() {
     </>
   );
 }
-
-export default Footer;

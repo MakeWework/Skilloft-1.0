@@ -3,9 +3,9 @@ import { Poppins } from "next/font/google";
 
 const inter = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
 export const metadata = {
-  title: "MakeWeWork",
+  title: "Skilloft",
   description:
-    "MakeWeWork is a platform that aims to bridge the gap between unexperienced techies and their first job.",
+    "Skilloft is a platform that aims to bridge the gap between unexperienced techies and their first job.",
 };
 
 export default function RootLayout({ children }) {
