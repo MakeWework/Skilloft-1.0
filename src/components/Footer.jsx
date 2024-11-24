@@ -28,7 +28,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-[#FFD700] flex justify-between items-center px-[150px]">
+      <footer className="bg-[#FFD700] flex justify-between items-center px-[80px]">
         <div>
           <Link href="/">
             <img src="/skilloft.png" alt="skilloft" width={140} />

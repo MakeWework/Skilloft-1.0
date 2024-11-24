@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <header className="text-base">
-      <nav className="flex justify-between py-[20px] px-[150px]">
+      <nav className="flex justify-between py-[22px] px-[80px]">
         <Link href="/">
           <img src="skilloft-black.png" alt="skilloft Logo" />
         </Link>
