@@ -27,36 +27,45 @@ export default function Footer() {
   ];
 
   return (
-    <>
-      <footer className="bg-[#FFD700] flex justify-between items-center px-[80px]">
-        <div>
+    <footer className="bg-[#FFD700] text-black py-8 px-6 md:px-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        {/* Logo and Social Icons */}
+        <div className="space-y-4">
           <Link href="/">
-            <img src="/skilloft.png" alt="skilloft" width={140} />
+            <img src="/skilloft.png" alt="Skilloft logo" width={140} />
           </Link>
-
-          <div className="flex gap-2 p-2 text-xl text-white">
+          <div className="flex gap-4 text-2xl text-black">
             {socials.map((social, index) => (
-              <Link href={social.href} key={index}>
+              <Link
+                href={social.href}
+                key={index}
+                aria-label={`Visit our ${social.href.split(".")[1]} page`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {social.icon}
               </Link>
             ))}
           </div>
         </div>
 
-        <div className="flex gap-8 text-base">
+        {/* Footer Links */}
+        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
           {footerLinks.map((link, index) => (
-            <Link href={link.href} key={index}>
+            <Link href={link.href} key={index} className="text-base hover:underline">
               {link.text}
             </Link>
           ))}
         </div>
-        <section className="flex items-center">
-          <p>
+
+        {/* Copyright Section */}
+        <div className="text-center md:text-left">
+          <p className="text-sm">
             ©2024 Skilloft.
-            <br /> All rights reserved
+            <br /> All rights reserved.
           </p>
-        </section>
-      </footer>
-    </>
+        </div>
+      </div>
+    </footer>
   );
 }
